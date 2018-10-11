@@ -5,12 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Web Synth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 </head>
 <body>
-  <h1>First Step</h1>
-  <button id="play"> Play </button>
-  <button id="stop"> Stop </button>
+  <main>
+    <h1>Oscillator</h1>
+    <table>
+      <tr>
+        <td>Type</td>
+        <td>
+          <select id="type" class="setup">
+            <option value="sine">Sine</option>
+            <option value="square">Square</option>
+            <option value="sawtooth">Sawtooth</option>
+            <option value="triangle">Triangle</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Freq</td>
+        <td><input type="range" min="50" max="5000" size="10" value="440" id="freq" class="setup"></td>
+      </tr>
+      <tr>
+        <td>Level</td>
+        <td><input type="range" min="0" max="1" step="0.01" size="10" value="1" id="level" class="setup"></td>
+      </tr>
+    </table>
+    <button class="setup" id="start">Play</button>
+    <button id="stop">Stop</button>
+  </main>
   <footer>
     <script src="sound.js"></script>
   </footer>
